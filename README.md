@@ -2,6 +2,8 @@
 
 A small browser extension for Chrome and Brave. It puts a box on YouTube Shorts showing how many Shorts you've scrolled through.
 
+![Shorts Scroll Counter](screenshot.png)
+
 - **Big number**: scrolls today (goes back to 0 at midnight)
 - **session**: scrolls since you opened this tab
 - **all-time**: every scroll since you installed it
