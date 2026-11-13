@@ -1,0 +1,110 @@
+#ssc-box {
+  position: fixed;
+  top: 72px;
+  right: 24px;
+  z-index: 2147483647;
+  min-width: 150px;
+  padding: 10px 14px 12px;
+  border-radius: 14px;
+  background: rgba(15, 15, 15, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+  user-select: none;
+  cursor: grab;
+  touch-action: none;
+}
+
+#ssc-box.ssc-dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+#ssc-box .ssc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#ssc-box .ssc-title {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#ssc-box .ssc-btns {
+  display: flex;
+  gap: 2px;
+}
+
+#ssc-box .ssc-btn {
+  all: unset;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+#ssc-box .ssc-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+#ssc-box .ssc-num {
+  margin-top: 2px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: #ff4e45;
+}
+
+#ssc-box .ssc-num.ssc-bump {
+  animation: ssc-bump 0.3s ease-out;
+}
+
+@keyframes ssc-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+#ssc-box .ssc-sub {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#ssc-box .ssc-sub b {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Minimised: just the number */
+#ssc-box.ssc-collapsed {
+  min-width: 0;
+  padding: 6px 10px;
+}
+#ssc-box.ssc-collapsed .ssc-title,
+#ssc-box.ssc-collapsed .ssc-sub {
+  display: none;
+}
+#ssc-box.ssc-collapsed .ssc-head {
+  justify-content: flex-end;
+}
+#ssc-box.ssc-collapsed .ssc-num {
+  font-size: 22px;
+  text-align: center;
+}

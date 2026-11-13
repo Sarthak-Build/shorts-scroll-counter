@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Shorts Scroll Counter",
+  "version": "1.0.0",
+  "description": "Shows a small box on YouTube Shorts that counts how many Shorts you've scrolled through.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
